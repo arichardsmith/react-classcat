@@ -1,6 +1,6 @@
 # Node modules
 node_modules
 
-# Built libs
-dist/
-es/
+# Built libs - tracked for now to allow installing from github
+# dist/
+# es/
