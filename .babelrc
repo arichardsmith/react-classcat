@@ -1,0 +1,32 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": [
+            "ie >= 11"
+          ]
+        },
+        "exclude": [
+          "transform-async-to-generator",
+          "transform-regenerator"
+        ],
+        "modules": false,
+        "loose": true
+      }
+    ]
+  ],
+  "env": {
+    "commonjs": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "loose": true
+          }
+        ]
+      ]
+    }
+  }
+}
