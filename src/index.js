@@ -32,7 +32,12 @@ export default function withClassNames (Component, classNames) {
     return h(Component, newProps)
   }
 
-  const displayName = Component.displayName || Component.name || 'Component'
+  const fallbackName = typeof Component === 'string'
+    ? Component
+    : 'Component'
+
+  const displayName = Component.displayName || Component.name || fallbackName
+
   WithClassNames.displayName = `withClassNames(${displayName})`
 
   hoistNonReactStatics(WithClassNames, Component)

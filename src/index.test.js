@@ -94,4 +94,8 @@ test('Wraps display name', t => {
   const PlainDivWithClass = withClassNames(PlainDiv)
 
   t.is(PlainDivWithClass.displayName, 'withClassNames(PlainDiv)')
+
+  const DivWithClass = withClassNames('div')
+
+  t.is(DivWithClass.displayName, 'withClassNames(div)')
 })
