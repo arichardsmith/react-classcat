@@ -27,7 +27,7 @@ export default function withClassNames (Component, classNames) {
       classNamesStr
     ])
 
-    const newProps = Object.assign({}, props, { className })
+    const newProps = Object.assign({}, props, { className, classNames: undefined })
 
     return h(Component, newProps)
   }

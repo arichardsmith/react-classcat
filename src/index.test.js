@@ -99,3 +99,14 @@ test('Wraps display name', t => {
 
   t.is(DivWithClass.displayName, 'withClassNames(div)')
 })
+
+test('Doesn\'t pass classNames prop to wrapped element', t => {
+  const { renderer } = t.context
+
+  const PlainDivWithClassNames = withClassNames('div')
+  renderer.render(h(PlainDivWithClassNames, { classNames: { foo: true } }))
+
+  const res = renderer.getRenderOutput()
+
+  t.is(res.props.classNames, undefined)
+})
