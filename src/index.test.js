@@ -58,7 +58,7 @@ test('Preserves existing className', t => {
   t.is(res.props.className, 'foo bar baz')
 })
 
-test.failing('Dedupes className', t => {
+test('Dedupes className', t => {
   const { renderer } = t.context
 
   const PlainDivWithClass = withClassNames(PlainDiv, 'foo')

@@ -25,7 +25,15 @@ export default function withClassNames (Component, classNames) {
       props.className,
       props.classNames,
       classNamesStr
-    ])
+    ]).split(' ') // Dedupe result
+      .reduce((acc, className) => {
+        if (!acc.includes(className)) {
+          acc.push(className)
+        }
+
+        return acc
+      }, [])
+      .join(' ')
 
     const newProps = Object.assign({}, props, { className, classNames: undefined })
 
