@@ -1,4 +1,6 @@
 # react-classcat
+**Archived:** I never ended up using this in any projects, so it is unsupported.
+
 React wrapper for [Classcat](https://github.com/jorgebucaran/classcat)
 
 A higher order component that parses classcat class definitions and assigns the class name to the provided component
